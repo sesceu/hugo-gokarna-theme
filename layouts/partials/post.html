@@ -14,6 +14,12 @@
     </div>
 
     <div class="post-content">
+        {{ if .Params.Image }}
+        <p>
+            <img src="{{ .Params.Image | absURL }}" alt="{{ .Title | markdownify }}">
+        </p>
+        {{ end }}
+    
         <p>
             {{ .Content }}
         </p>
